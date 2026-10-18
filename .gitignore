@@ -1,0 +1,31 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+tmp/
+temp/
+
+# Common build/cache output
+__pycache__/
+*.py[cod]
+node_modules/
+dist/
+build/
+.venv/
+venv/
