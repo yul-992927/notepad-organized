@@ -1,0 +1,24 @@
+{
+  "groups": {
+    "eigrp_100": {
+      "description": "EIGRP AS 100 적용 대상",
+      "devices": ["R1", "R2", "R3", "R4"]
+    },
+    "eigrp_200": {
+      "description": "EIGRP AS 200 적용 대상",
+      "devices": ["R2", "R5", "R6", "R7"]
+    },
+    "rip": {
+      "description": "RIP v2 적용 대상",
+      "devices": ["R4", "R8", "R9"]
+    },
+    "static": {
+      "description": "Static Route 영역",
+      "devices": ["R3", "R10", "R11", "R12", "R13"]
+    },
+    "management": {
+      "description": "C&C 및 관리 Static 영역",
+      "devices": ["R12", "R13"]
+    }
+  }
+}

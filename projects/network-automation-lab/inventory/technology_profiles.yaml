@@ -1,0 +1,189 @@
+{
+  "profiles": {
+    "R1": {
+      "eigrp_100": {
+        "label": "EIGRP AS 100 기본 구성",
+        "status": "ready",
+        "operation": "config",
+        "commands": [
+          "router eigrp 100",
+          "network 198.18.0.0 0.0.31.255",
+          "network 198.18.32.0 0.0.31.255",
+          "network 198.18.64.0 0.0.31.255",
+          "no auto-summary"
+        ]
+      },
+      "static_to_eigrp": {
+        "label": "Static → EIGRP 재분배",
+        "status": "pending",
+        "operation": "config",
+        "missing": ["재분배 metric 값", "실제 Static Route 목록"]
+      }
+    },
+    "R2": {
+      "eigrp_100": {
+        "label": "EIGRP AS 100 기본 구성",
+        "status": "ready",
+        "operation": "config",
+        "commands": [
+          "router eigrp 100",
+          "network 198.18.0.0 0.0.31.255",
+          "network 198.18.32.0 0.0.31.255",
+          "network 198.18.64.0 0.0.31.255",
+          "no auto-summary"
+        ]
+      },
+      "eigrp_200": {
+        "label": "EIGRP AS 200 기본 구성",
+        "status": "ready",
+        "operation": "config",
+        "commands": [
+          "router eigrp 200",
+          "network 198.19.0.0 0.0.31.255",
+          "network 198.19.64.0 0.0.31.255",
+          "no auto-summary"
+        ]
+      },
+      "eigrp_redistribution": {
+        "label": "EIGRP 100 ↔ 200 재분배",
+        "status": "pending",
+        "operation": "config",
+        "missing": ["양방향 재분배 여부", "metric 정책", "route filtering 정책"]
+      }
+    },
+    "R3": {
+      "eigrp_100": {
+        "label": "EIGRP AS 100 기본 구성",
+        "status": "ready",
+        "operation": "config",
+        "commands": [
+          "router eigrp 100",
+          "network 198.18.0.0 0.0.31.255",
+          "no auto-summary"
+        ]
+      },
+      "floating_static": {
+        "label": "Floating Static Route",
+        "status": "pending",
+        "operation": "config",
+        "missing": ["목적지 Prefix", "Next-hop 호스트 IP", "Administrative Distance"]
+      }
+    },
+    "R4": {
+      "eigrp_100": {
+        "label": "EIGRP AS 100 기본 구성",
+        "status": "ready",
+        "operation": "config",
+        "commands": [
+          "router eigrp 100",
+          "network 198.18.64.0 0.0.31.255",
+          "no auto-summary"
+        ]
+      },
+      "rip_v2": {
+        "label": "RIP v2 및 EIGRP 재분배",
+        "status": "pending",
+        "operation": "config",
+        "missing": ["RIP 대상 인터페이스", "Passive Interface", "재분배 metric 정책"]
+      }
+    },
+    "R5": {
+      "eigrp_200": {
+        "label": "EIGRP AS 200 기본 구성",
+        "status": "ready",
+        "operation": "config",
+        "commands": [
+          "router eigrp 200",
+          "network 198.19.64.0 0.0.31.255",
+          "no auto-summary"
+        ]
+      }
+    },
+    "R6": {
+      "eigrp_200": {
+        "label": "EIGRP AS 200 기본 구성",
+        "status": "ready",
+        "operation": "config",
+        "commands": [
+          "router eigrp 200",
+          "network 198.19.0.0 0.0.31.255",
+          "no auto-summary"
+        ]
+      }
+    },
+    "R7": {
+      "eigrp_200": {
+        "label": "EIGRP AS 200 기본 구성",
+        "status": "ready",
+        "operation": "config",
+        "commands": [
+          "router eigrp 200",
+          "network 198.19.0.0 0.0.31.255",
+          "network 198.19.32.0 0.0.31.255",
+          "network 198.19.64.0 0.0.31.255",
+          "no auto-summary"
+        ]
+      },
+      "eigrp_advanced": {
+        "label": "Variance / Offset-list / Stub",
+        "status": "pending",
+        "operation": "config",
+        "missing": ["Variance 배수", "Offset-list ACL과 방향", "Stub 옵션"]
+      }
+    },
+    "R8": {
+      "rip_v2": {
+        "label": "RIP v2 지사 구성",
+        "status": "pending",
+        "operation": "config",
+        "missing": ["실제 인터페이스 이름", "LAN Passive Interface 여부"]
+      }
+    },
+    "R9": {
+      "rip_v2": {
+        "label": "RIP v2 지사 구성",
+        "status": "pending",
+        "operation": "config",
+        "missing": ["실제 인터페이스 이름", "LAN Passive Interface 여부"]
+      }
+    },
+    "R10": {
+      "nat_pat": {
+        "label": "NAT/PAT 구성",
+        "status": "pending",
+        "operation": "config",
+        "missing": ["Inside/Outside 인터페이스", "ACL 번호", "외부 인터페이스/Pool"]
+      },
+      "static_route": {
+        "label": "Static/Floating Route",
+        "status": "pending",
+        "operation": "config",
+        "missing": ["목적지 Prefix", "Next-hop 호스트 IP", "Administrative Distance"]
+      }
+    },
+    "R11": {
+      "dmz_acl": {
+        "label": "DMZ Routing 및 ACL",
+        "status": "pending",
+        "operation": "config",
+        "missing": ["DMZ 인터페이스", "서비스 포트", "ACL 허용/차단 정책"]
+      }
+    },
+    "R12": {
+      "management_static": {
+        "label": "C&C 관리망 Static Route/ACL/SSH",
+        "status": "pending",
+        "operation": "config",
+        "missing": ["R12 인터페이스 호스트 IP", "Next-hop IP", "VTY ACL 정책"]
+      }
+    },
+    "R13": {
+      "management_static": {
+        "label": "백업 관리망 Static Route/ACL/SSH",
+        "status": "pending",
+        "operation": "config",
+        "missing": ["R13 관리 IP", "Next-hop IP", "VTY ACL 정책"]
+      }
+    }
+  }
+}

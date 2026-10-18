@@ -1,0 +1,22 @@
+{
+  "devices": {
+    "R1": {"management_ip": "192.0.2.1", "platform": "cisco_ios", "groups": ["eigrp_100"]},
+    "R2": {"management_ip": "192.0.2.2", "platform": "cisco_ios", "groups": ["eigrp_100", "eigrp_200"]},
+    "R3": {"management_ip": "192.0.2.3", "platform": "cisco_ios", "groups": ["eigrp_100", "static"]},
+    "R4": {"management_ip": "192.0.2.4", "platform": "cisco_ios", "groups": ["eigrp_100", "rip"]},
+    "R5": {"management_ip": "192.0.2.5", "platform": "cisco_ios", "groups": ["eigrp_200"]},
+    "R6": {"management_ip": "192.0.2.6", "platform": "cisco_ios", "groups": ["eigrp_200"]},
+    "R7": {"management_ip": "192.0.2.7", "platform": "cisco_ios", "groups": ["eigrp_200"]},
+    "R8": {"management_ip": "192.0.2.8", "platform": "cisco_ios", "groups": ["rip"]},
+    "R9": {"management_ip": "192.0.2.9", "platform": "cisco_ios", "groups": ["rip"]},
+    "R10": {"management_ip": "192.0.2.10", "platform": "cisco_ios", "groups": ["static", "nat"]},
+    "R11": {"management_ip": "192.0.2.11", "platform": "cisco_ios", "groups": ["static", "dmz_acl"]},
+    "R12": {"management_ip": "192.0.2.12", "platform": "cisco_ios", "groups": ["management", "static"]},
+    "R13": {
+      "management_ip": null,
+      "platform": "cisco_ios",
+      "groups": ["management", "static"],
+      "note": "실제 관리 IP 또는 Loopback IP를 확정한 뒤 입력"
+    }
+  }
+}

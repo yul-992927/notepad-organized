@@ -7,10 +7,18 @@
 - `notes/`: 개념 정리와 학습 노트
 - `labs/`: 본인 소유 또는 명시적으로 허가받은 환경의 실습 기록
 - `scripts/`: 반복 작업을 위한 보조 스크립트
+- `projects/`: 실행 가능한 예제 프로젝트
 - `templates/`: 새 문서를 시작할 때 사용하는 템플릿
 - `docs/`: 이용 조건, 안전 수칙, 기여 안내
 
 각 폴더의 `README.md`를 먼저 읽고, 새 문서는 의미 있는 이름과 날짜를 사용해 추가하세요.
+
+### 현재 정리된 코드
+
+- [Kali VM 보안 실습 코드](labs/kali-desktop/README.md)
+- [바탕화면 `note`의 보안 실습 예제](labs/security-examples/README.md)
+- [해시 형식 판별 및 Windows 프록시 스크립트](scripts/README.md)
+- [네트워크 자동화 실습 프로젝트](projects/network-automation-lab/README.md)
 
 ## 중요: 안전하고 합법적인 사용
 
